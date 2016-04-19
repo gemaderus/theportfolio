@@ -14,35 +14,100 @@ Navigation usually means list of links. And we have some flavours using distinct
 
 */
 
-// Horizontal
-
-.nav {
-    @extend %clearfix;
-
-    > li {
-        &, > a {
-            display: inline-block;
-        }
-    }
+.Navigation {
+  display: none;
+  flex: 1;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  
+  @media screen and (min-width: $desktop) {
+    display: initial;
+    position: initial;
+    margin-bottom: 50px;
+  }
 }
 
-// .nav-banner centres the list
+.Navigation-menu {
+  border-top: 1px solid $golden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+  
+  @media screen and (min-width: $tablet) {
+    border: 0;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+}
+  
+.Navigation-item {
+  display: flex;
+  margin-right: 20px;
 
-.nav-banner {
-    text-align:center;
+  &:last-child {
+    margin-right: 0;
+  }
+  
+  &:hover {
+    .Navigation-order {
+      color: $white;
+    }
+
+    h3 {
+      color: $golden;
+    }
+  }
+   
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    flex: 0 0 120px;
+    width: 120px;
+    margin-bottom: 0;
+    height: 65px;
+    padding: 0;
+    border: 0;
+  }
+  
+  h3 {
+    color: $white;
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
+  }
 }
 
-// Force a nav to occupy 100% of the available width of its parent.
+.Navigation-item-link {
+  padding: 2em;
+  width: 100%;
+  
+  @media screen and (min-width: $tablet) {
+    padding: 0; 
+  }
+}
 
-.nav-fit {
-    display: table;
-    width: 100%;
-
-    > li {
-        display: table-cell;
-
-        > a {
-            display: block;
-        }
-    }
+.Navigation-order {
+  color: $golden;
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 0.4em;
+  text-align: center;
+  
+  &:after {
+    background-color: darken($golden, 10%);
+    content: '';
+    display: block;
+    height: 2px;
+  }
+  
+  @media screen and (min-width: $tablet) {
+    text-align: right;
+  }
 }

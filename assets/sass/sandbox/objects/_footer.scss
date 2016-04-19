@@ -1,0 +1,28 @@
+.Footer {
+  display: flex;
+  padding: 30px;
+  background-color: #212121;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+  @media screen and (min-width: $tablet) {
+    position: static;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 40px 60px;
+  }
+}
+
+.Footer-item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: block;
+  }
+}

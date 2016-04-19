@@ -1,0 +1,12 @@
+.User {
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 60px;
+    border-bottom: 1px solid $golden;
+    display: inline-block;
+  }
+}
+
+.User-mail {
+  color: $white;
+  font-size: 2rem;
+}
