@@ -2,6 +2,9 @@
   padding: 30px;
   background-color: #212121;
   color: $golden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
   @media screen and (min-width: $tablet) {
     flex: 1;  
@@ -9,5 +12,6 @@
 
   @media screen and (min-width: $desktop) {
     padding: 40px 60px;
+    justify-content: center;
   }
 }

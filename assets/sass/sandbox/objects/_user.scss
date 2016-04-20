@@ -1,4 +1,6 @@
 .User {
+  padding-bottom: 30px;
+
   @media screen and (min-width: $tablet) {
     padding-bottom: 60px;
     //border-bottom: 1px solid $golden;
@@ -6,7 +8,19 @@
   }
 }
 
+.lead {
+  margin-bottom: 30px;
+}
+
 .User-mail {
   color: $white;
   font-size: 2rem;
+}
+
+.About {
+  a:hover {
+    span {
+      border-bottom: 1px solid $white;
+    }
+  }
 }
