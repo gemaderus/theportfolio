@@ -1,0 +1,27 @@
+.Jobs-image-group, .Jobs-image-mosaic {
+  @extend .clearfix;
+}
+
+.Jobs-image {
+  max-width: 100%;
+  float: left;
+}
+
+.Jobs-image-medium {
+  max-width: 50%;
+}
+
+.Jobs-image-small {
+  max-width: 33%;
+}
+
+.non-margin-right {
+  margin-right: 0;
+}
+
+.Jobs-description {
+  color: #444;
+  padding: 20px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}

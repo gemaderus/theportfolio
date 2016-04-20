@@ -20,15 +20,9 @@
 }
 
 .Content-right {
-  padding: 30px 30px 130px;
   
   @media screen and (min-width: $tablet) {
     flex: 0 0 60%;
     overflow-Y: scroll;
-    padding: 30px;
-  }
-
-   @media screen and (min-width: $desktop) {
-    padding: 40px 60px;
   }
 }
