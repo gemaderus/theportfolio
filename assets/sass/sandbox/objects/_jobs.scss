@@ -1,10 +1,32 @@
-.Jobs-image-group, .Jobs-image-mosaic {
-  @extend .clearfix;
+.Jobs-item {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    
+    .Jobs-image-group {
+      .overlay {
+        background-color: rgba(0,0,0,0.8);
+      }
+    }
+    .Jobs-description {
+      h4:after{
+        width: 130%;
+      }
+    }
+  }
+}
+
+.Jobs-image-group {
+  //@extend .clearfix;
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .Jobs-image {
   max-width: 100%;
-  float: left;
 }
 
 .Jobs-image-medium {
@@ -20,8 +42,51 @@
 }
 
 .Jobs-description {
-  color: #444;
-  padding: 20px;
+  color: $white;
   width: 100%;
-  // border-bottom: 1px solid #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  
+  h4 {
+    font-size: 36px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: $white;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.3s;
+    }
+  }
+
+  p {
+    font-size: 20px;
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5); /*dim the background*/
+  transition: background 0.3s;
 }
