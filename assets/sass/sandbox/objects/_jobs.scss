@@ -18,11 +18,14 @@
 }
 
 .Jobs-image-group {
-  //@extend .clearfix;
   position: relative;
-  height: 500px;
+  height: 250px;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: $tablet) {
+    height: 500px;
+  }
 }
 
 .Jobs-image {
